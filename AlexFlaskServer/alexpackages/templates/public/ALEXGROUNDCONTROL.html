@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/AGC.css')}}">
+    <title>ALEX Ground Control</title>
+</head>
+<body>
+    <div class="container">
+        <div class="stream" > 
+            <img src="{{ url_for('video_feed')}}">
+        </div>
+
+
+        <div class="map" > testing map location</div>
+
+
+        <div class="ctrl" > 
+            <form action="" method="POST">
+                <div id="movement"> 	
+                    <div class="topp"><button type="button" id="top" onclick="forward('forward')">/\</button></div>
+                    <div class="leftt"><button type="button" id="left" onclick="left('left')"><</button></div>
+                    <div class="bottomm"><button type="button" id="bottom" onclick="backward('backward')">\/</button></div>
+                    <div class="rightt"><button type="button" id="right" onclick="right('right')">></button></div>
+                    <div class="speedup"><button type="button" id="speedupp" onclick="speedup('speedup')">SPEED +</button></div>
+                    <div class="slowdown"><button type="button" id="slowdownn"onclick="slowdown('slowdown')">SPEED -</button></div>
+                   -<div class="stop"><button type="button" id="stopp" onclick="stop('stop')">STOP</button></div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="{{ url_for ('static', filename='js/AGC.js')}}"></script>
+</body>
+</html>
